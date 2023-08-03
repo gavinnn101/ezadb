@@ -22,7 +22,7 @@ exit /b 0
 :: Subroutine to print usage instructions
 :usage
     echo Usage: ezadb connect [PORT]             - Connects to the device at 127.0.0.1:$port and forwards tcp:61666 for local scripts
-    echo        ezadb logs [PORT] [OUTPUT_PATH]  - Prints logs for device at $port and saves them to OUTPUT_PATH or ~/Desktop/output.txt if omitted
+    echo        ezadb logs [PORT] [OUTPUT_PATH]  - Prints logs for device at $port and saves them to OUTPUT_PATH or ~/Desktop/ezadb.log if omitted
     echo        ezadb list                       - Lists connected devices. (`adb devices` wrapper)
 exit /b 0
 

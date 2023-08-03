@@ -12,8 +12,8 @@
 |----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------|
 | `ezadb connect`            | `[PORT]`         | Connects to the device at 127.0.0.1:$port and forwards tcp:61666 for local scripts.                                |
 |                            |                  | **[PORT]**: The port number to connect to.                                                                         |
-| `ezadb logs`               | `[PORT]`         | Prints logs for the device at $port.                                                                               |
-|                            | `[OUTPUT_PATH]`  | (Optional) Path to save log files. Defaults to ~/Desktop/ezadb.log if omitted.                                      |
+| `ezadb logs`               | `[PORT]`         | Prints and saves logs to file for the device at $port. Will also open the log file after its finished printing.    |
+|                            | `[OUTPUT_PATH]`  | (Optional) Path to save log files. Defaults to ~/Desktop/ezadb.log if omitted.                                     |
 | `ezadb list`               | ` `              | Lists connected devices. (`adb devices` wrapper)                                                                   |
 
 

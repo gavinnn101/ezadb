@@ -20,4 +20,5 @@
 # Troubleshooting
 
 * Did you get `ezadb is not recognized as an internal or external command`?
-* * Something is wrong with how you setup your path to `ezadb` in your environment variables.
+* * Something is probably wrong with how you setup your path to `ezadb` in your environment variables.
+* * It's also possible you haven't restarted your shell since you added the script / environment variable. Restart your shell and try again.

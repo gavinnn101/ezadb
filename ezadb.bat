@@ -60,7 +60,7 @@ exit /b 0
         "$outputPath = '%outputPathCleaned%';" ^
         "$adbLogcat = & 'adb' -s $port logcat -d;" ^
         "$filters = 'eglCodecCommon', 'EGL_emulation', 'eglMakeCurrent';" ^
-        "$filteredLogs = $adbLogcat | Where-Object { $line = $_; $filters | ForEach-Object { $line -notmatch $_ } };" ^
+        "$filteredLogs = $adbLogcat | Where-Object { $line = $_; $match = $false; $filters | ForEach-Object { if($line -match $_) { $match = $true } }; $match -eq $false };" ^
         "$filteredLogs | Tee-Object -FilePath $outputPath;" ^
         "Start-Process $outputPath"
 exit /b 0
